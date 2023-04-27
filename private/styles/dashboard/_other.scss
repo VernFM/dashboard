@@ -1,3 +1,5 @@
+@import '../_default.scss';
+
 /* Import Lato font */
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
@@ -63,8 +65,8 @@ header,
   border-top: var(--dark-background) 4px solid;
 }
 
-/* Overlay styling */
-.overlay {
+/* navOverlay styling */
+.navOverlay {
   display: none;
   position: fixed;
   top: 0;
@@ -78,13 +80,13 @@ header,
   justify-content: center;
 }
 
-/* Light mode overlay styling */
-.overlay.light-mode {
+/* Light mode navOverlay styling */
+.navOverlay.light-mode {
   background-color: #f5f5f5f0;
 }
 
-/* Overlay ul styling */
-.overlay ul {
+/* navOverlay ul styling */
+.navOverlay ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -94,15 +96,15 @@ header,
   align-items: center;
 }
 
-/* Overlay ul li styling */
-.overlay ul li {
+/* navOverlay ul li styling */
+.navOverlay ul li {
   padding: 10px 0;
   text-align: center;
   font-size: 1.2em;
 }
 
-/* Overlay ul li a styling */
-.overlay ul li a {
+/* navOverlay ul li a styling */
+.navOverlay ul li a {
   color: var(--light-background);
   text-decoration: none;
 }
@@ -138,7 +140,7 @@ h2 {
 /* Statistic-card and theme-toggle styling */
 .statistic-card,
 #theme-toggle {
-  background-color: var(-- accent-color);
+  background-color: var(--accent-color);
   color: var(--light-text);
   font-weight: 400;
   border-radius: 10px;
@@ -161,26 +163,29 @@ h2 {
 }
 
 /* Statistic-card background and color settings */
-.statistic-card1,
-.statistic-card2,
-.statistic-card3,
-.statistic-card4,
-.statistic-card5,
-.statistic-card6 {
-  background: url(./pattern.svg) center no-repeat;
-  background-size: cover;
+.statistic-card {
+  width: 80%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--dark-text);
+  font-size: 48px;
+  font-weight: 700;
+  background-image: url(../private/media/general/images/pattern.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   filter: grayscale(100%);
 }
 
 /* Light mode statistic-card background and color settings */
-.statistic-card1.light-mode,
-.statistic-card2.light-mode,
-.statistic-card3.light-mode,
-.statistic-card4.light-mode,
-.statistic-card5.light-mode,
-.statistic-card6.light-mode {
-  background-image: url(./profile.gif) center no-repeat;
+.statistic-card.light-mode {
+  background-image: url(../private/media/general/images/pattern.svg);
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   color: var(--dark-text);
   filter: grayscale(100%);
@@ -194,28 +199,10 @@ nav {
   padding: 20px;
 }
 
-/* Notification-icon and nav-icon styling */
-.notification-icon,
+/* nav-icon styling */
 .nav-icon {
   font-size: 18px;
   color: var(--light-text);
-}
-
-/* Notification-icon color */
-.notification-icon {
-  color: var(--dark-text);
-}
-
-/* Notification styling */
-.notification {
-  background-color: var(--notification-background);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
 }
 
 /* Nav-page styling */
@@ -261,7 +248,7 @@ footer {
 }
 
 /* Light mode text links styling */
-.overlay.light-mode ul li a {
+.navOverlay.light-mode ul li a {
   color: var(--dark-background);
 }
 
@@ -278,4 +265,39 @@ footer {
   left: 10%;
   font-size: 18px;
   font-weight: 300;
+}
+
+#navOverlayCloseButton {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  font-size: 24px;
+}
+
+.signup-btn,
+.login-btn {
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.login-btn {
+  background-color: var(--light-background);
+  color: var(--dark-background);
+}
+
+.signup-btn {
+  background-color: var(--accent-color);
+  color: var(--dark-background);
+}
+
+/* ------- [GLOBAL FOR ALL OVERLAYS] --------*/
+
+.overlayTitle {
+  position: absolute;
+  top: 40px;
+  font-size: 24px;
+  font-weight: 700;
 }

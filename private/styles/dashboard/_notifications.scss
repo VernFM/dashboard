@@ -1,0 +1,171 @@
+@import '../_default.scss';
+
+/* ---- [Notifications] ---- */
+
+.notificationOverlay {
+  overflow-y: auto;
+  max-height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  background-color: $dimmed-dark;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.notificationOverlay.light-mode {
+  background-color: $dimmed-light;
+}
+
+.notificationOverlay ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.notificationOverlay ul li {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.notificationOverlay ul li a {
+  color: $white;
+  text-decoration: none;
+}
+
+.notificationOverlay.light-mode ul li a {
+  color: $dark-gray;
+}
+
+.notification-icon {
+  font-size: 18px;
+  color: $white;
+}
+
+.notification {
+  background-color: $light-gray;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+#notificationOverlayCloseButton {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  font-size: 24px;
+}
+
+.message {
+  width: calc(80vw - 80px);
+  height: auto;
+  aspect-ratio: 16/9;
+  background-color: $light-gray;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.message-container {
+  background-color: $light-gray;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+}
+
+.message-container.light-mode {
+  background-color: $white;
+  color: $dark-gray;
+}
+
+.message-container.expanded {
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: auto;
+}
+
+.message-profile {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.message-profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.message-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 1.4em;
+  padding-right: 10px;
+}
+
+.expanded .message-text {
+  display: block;
+  margin-bottom: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.message-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.top-message {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+.expanded .message-container {
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: auto;
+  padding-bottom: 40px;
+}
+
+#refresh-messages {
+  background-color: $accent-color;
+  color: $dark-gray;
+  font-weight: 400;
+  border-radius: 40px;
+  padding: 15px;
+  border: none;
+}
+
+#refresh-messages:hover {
+  background-color: $light-gray;
+  color: $white;
+  font-weight: 400;
+  border-radius: 40px;
+  padding: 15px;
+  border: 2px solid $accent-color;
+  transition: 0.3s;
+}
