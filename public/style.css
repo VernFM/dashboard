@@ -171,6 +171,50 @@
   transition: 0.3s;
 }
 
+/* This is for trying to center the items hotizontally */
+.message-container.expanded {
+  display: flex;
+  justify-content: center;
+}
+
+.message-container.expanded .top-message {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-left: 0;
+}
+
+.message-container.expanded .message-text {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.message-container.expanded .message-profile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+  margin-right: 0;
+  margin-bottom: 20px;
+}
+
+.message-container.expanded .message-date {
+  position: absolute;
+  right: 20px;
+}
+
+.message-title {
+  color: #f9ff7a;
+}
+
+.message-container.light-mode .message-title {
+  color: #495d63;
+}
+
+.message-date {
+  color: #b8b8ff;
+}
+
 /* Define color variables */
 :root {
   --dark-background: #242529;
@@ -342,7 +386,6 @@ h2 {
   color: var(--dark-text);
   font-size: 48px;
   font-weight: 700;
-  background-image: url(../private/media/general/images/pattern.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -351,12 +394,44 @@ h2 {
 
 /* Light mode statistic-card background and color settings */
 .statistic-card.light-mode {
-  background-image: url(../private/media/general/images/pattern.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--dark-text);
   filter: grayscale(100%);
+}
+
+.statistic-card1,
+.statistic-card1.light-mode,
+.statistic-card4,
+.statistic-card4.light-mode,
+.statistic-card7,
+.statistic-card7.light-mode,
+.statistic-card10,
+.statistic-card10.light-mode {
+  background-image: url(../private/media/general/images/pattern.svg);
+}
+
+.statistic-card2,
+.statistic-card2.light-mode,
+.statistic-card5,
+.statistic-card5.light-mode,
+.statistic-card8,
+.statistic-card8.light-mode,
+.statistic-card11,
+.statistic-card11.light-mode {
+  background-image: url(../private/media/general/images/pattern-2.svg);
+}
+
+.statistic-card3,
+.statistic-card3.light-mode,
+.statistic-card6,
+.statistic-card6.light-mode,
+.statistic-card9,
+.statistic-card9.light-mode,
+.statistic-card12,
+.statistic-card12.light-mode {
+  background-image: url(../private/media/general/images/pattern-3.svg);
 }
 
 /* Nav styling */

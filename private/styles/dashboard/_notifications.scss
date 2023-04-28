@@ -169,3 +169,48 @@
   border: 2px solid $accent-color;
   transition: 0.3s;
 }
+
+/* This is for trying to center the items hotizontally */
+
+.message-container.expanded {
+  display: flex;
+  justify-content: center;
+}
+
+.message-container.expanded .top-message {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-left: 0;
+}
+
+.message-container.expanded .message-text {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.message-container.expanded .message-profile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+  margin-right: 0;
+  margin-bottom: 20px;
+}
+
+.message-container.expanded .message-date {
+  position: absolute;
+  right: 20px;
+}
+
+.message-title {
+  color: $accent-color;
+}
+
+.message-container.light-mode .message-title {
+  color: $metal-accent-color;
+}
+
+.message-date {
+  color: $light-purple;
+}
