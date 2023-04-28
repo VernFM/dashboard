@@ -181,6 +181,7 @@
 .message-container.expanded {
   display: flex;
   justify-content: center;
+  align-items: center; // REMOVE
 }
 
 .message-container.expanded .top-message {
@@ -188,6 +189,11 @@
   display: flex;
   justify-content: center;
   margin-left: 0;
+
+  // DELETE BELOW
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .message-container.expanded .message-text {
@@ -199,7 +205,8 @@
   position: relative;
   display: flex;
   justify-content: center;
-  width: 80vw;
+  // width: 80vw; UNCOMMENT
+  width: 100%; // REMOVE
   margin-right: 0;
   margin-bottom: 20px;
 }
@@ -207,6 +214,7 @@
 .message-container.expanded .message-date {
   position: absolute;
   right: 20px;
+  top: 0;
 }
 
 .message-title {
@@ -220,3 +228,5 @@
 .message-date {
   color: $light-purple;
 }
+
+/* ------------------- PROFILE IMAGE IS NOT IN THE CENTER HORIZONTALLY. IT WORKS ONLY ON SMALL PHONES FIX*/

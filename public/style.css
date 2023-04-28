@@ -1,5 +1,3 @@
-/* Import Lato font */
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 /* ---- [Notifications] ---- */
@@ -181,6 +179,7 @@
 .message-container.expanded {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .message-container.expanded .top-message {
@@ -188,6 +187,9 @@
   display: flex;
   justify-content: center;
   margin-left: 0;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .message-container.expanded .message-text {
@@ -199,7 +201,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  width: 80vw;
+  width: 100%;
   margin-right: 0;
   margin-bottom: 20px;
 }
@@ -207,6 +209,7 @@
 .message-container.expanded .message-date {
   position: absolute;
   right: 20px;
+  top: 0;
 }
 
 .message-title {
@@ -221,30 +224,21 @@
   color: #b8b8ff;
 }
 
-/* Define color variables */
-:root {
-  --dark-background: #242529;
-  --light-background: #f5f5f5;
-  --accent-color: #f9ff7a;
-  --notification-background: #35363d;
-  --dark-text: #f5f5f5;
-  --light-text: #242529;
-}
-
+/* ------------------- PROFILE IMAGE IS NOT IN THE CENTER HORIZONTALLY. IT WORKS ONLY ON SMALL PHONES FIX*/
 /* General body styling */
 body {
   font-family: "Lato", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--dark-background);
-  color: var(--dark-text);
+  background-color: #242529;
+  color: #ffffff;
   transition: background-color 0.3s, color 0.3s;
 }
 
 /* Light mode body styling */
 body.light-mode {
-  background-color: var(--light-background);
-  color: var(--light-text);
+  background-color: #ffffff;
+  color: #242529;
 }
 
 /* Container styling */
@@ -271,16 +265,16 @@ header,
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: var(--accent-color);
-  color: var(--dark-text);
+  background-color: #f9ff7a;
+  color: #ffffff;
   border-radius: 50px 50px 0 0;
   z-index: 3;
-  border-top: var(--dark-text) 4px solid;
+  border-top: #ffffff 4px solid;
 }
 
 /* Light mode navbar-bottom styling */
 .navbar-bottom.light-mode {
-  border-top: var(--dark-background) 4px solid;
+  border-top: #242529 4px solid;
 }
 
 /* navOverlay styling */
@@ -300,7 +294,7 @@ header,
 
 /* Light mode navOverlay styling */
 .navOverlay.light-mode {
-  background-color: rgba(245, 245, 245, 0.9411764706);
+  background-color: #e4e4e4;
 }
 
 /* navOverlay ul styling */
@@ -323,7 +317,7 @@ header,
 
 /* navOverlay ul li a styling */
 .navOverlay ul li a {
-  color: var(--light-background);
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -358,8 +352,8 @@ h2 {
 /* Statistic-card and theme-toggle styling */
 .statistic-card,
 #theme-toggle {
-  background-color: var(--accent-color);
-  color: var(--light-text);
+  background-color: #f9ff7a;
+  color: #242529;
   font-weight: 400;
   border-radius: 10px;
   padding: 20px;
@@ -376,7 +370,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--dark-text);
+  color: #ffffff;
   font-size: 48px;
   font-weight: 700;
 }
@@ -390,7 +384,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--dark-text);
+  color: #ffffff;
   font-size: 48px;
   font-weight: 700;
   background-position: center;
@@ -404,7 +398,7 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: var(--dark-text);
+  color: #ffffff;
   filter: grayscale(100%);
 }
 
@@ -452,7 +446,7 @@ nav {
 /* nav-icon styling */
 .nav-icon {
   font-size: 18px;
-  color: var(--light-text);
+  color: #242529;
 }
 
 /* Nav-page styling */
@@ -462,7 +456,7 @@ nav {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: var(--dark-text);
+  color: #ffffff;
   border-radius: 50px;
   margin: 5px;
 }
@@ -471,7 +465,7 @@ nav {
 .nav-text {
   margin-top: 4px;
   font-size: 12px;
-  color: var(--light-text);
+  color: #242529;
   font-weight: 400;
 }
 
@@ -493,13 +487,13 @@ footer {
 
 /* Light mode theme-toggle button styling */
 #theme-toggle.light-mode {
-  background-color: var(--dark-background);
-  color: var(--dark-text);
+  background-color: #242529;
+  color: #ffffff;
 }
 
 /* Light mode text links styling */
 .navOverlay.light-mode ul li a {
-  color: var(--dark-background);
+  color: #242529;
 }
 
 /* Header-logo styling */
@@ -534,13 +528,13 @@ footer {
 }
 
 .login-btn {
-  background-color: var(--light-background);
-  color: var(--dark-background);
+  background-color: #ffffff;
+  color: #242529;
 }
 
 .signup-btn {
-  background-color: var(--accent-color);
-  color: var(--dark-background);
+  background-color: #f9ff7a;
+  color: #242529;
 }
 
 /* ------- [GLOBAL FOR ALL OVERLAYS] --------*/
