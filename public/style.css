@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+/* [Colors] */
+/* [Colors] */
 /* ---- [Notifications] ---- */
 .notificationOverlay {
   overflow-y: auto;
@@ -17,7 +17,7 @@
 }
 
 .notificationOverlay.light-mode {
-  background-color: #e4e4e4;
+  background-color: rgba(228, 228, 228, 0.9411764706);
 }
 
 .notificationOverlay ul {
@@ -224,7 +224,8 @@
   color: #b8b8ff;
 }
 
-/* ------------------- PROFILE IMAGE IS NOT IN THE CENTER HORIZONTALLY. IT WORKS ONLY ON SMALL PHONES FIX*/
+/* [Colors] */
+/* [Colors] */
 /* General body styling */
 body {
   font-family: "Lato", sans-serif;
@@ -294,7 +295,7 @@ header,
 
 /* Light mode navOverlay styling */
 .navOverlay.light-mode {
-  background-color: #e4e4e4;
+  background-color: rgba(228, 228, 228, 0.9411764706);
 }
 
 /* navOverlay ul styling */
@@ -535,6 +536,10 @@ footer {
 .signup-btn {
   background-color: #f9ff7a;
   color: #242529;
+}
+
+#navOverlayCloseButton {
+  cursor: pointer;
 }
 
 /* ------- [GLOBAL FOR ALL OVERLAYS] --------*/

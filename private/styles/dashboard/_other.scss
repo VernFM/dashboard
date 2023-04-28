@@ -312,6 +312,10 @@ footer {
   color: $dark-gray;
 }
 
+#navOverlayCloseButton {
+  cursor: pointer;
+}
+
 /* ------- [GLOBAL FOR ALL OVERLAYS] --------*/
 
 .overlayTitle {

@@ -1,13 +1,7 @@
 // Global
 @use './_default.scss';
 
-// Index
+// Home
 @use './dashboard/_notifications.scss';
+@use './dashboard/_nav-overlay.scss';
 @use './dashboard/_other.scss';
-
-// Responsive styles
-// @use './_responsive.scss';
-
-// Fonts
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap'); // not in use but VernFM font
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
