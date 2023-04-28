@@ -150,6 +150,7 @@ h2 {
 
 /* Statistic-card styling */
 .statistic-card {
+  position: relative; /* IOS fix */
   width: 80%;
   height: auto;
   aspect-ratio: 16 / 9;
