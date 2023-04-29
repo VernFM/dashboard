@@ -40,8 +40,8 @@ themeToggle.addEventListener('click', () => {
 
   elementsToToggle.forEach(toggleLightMode);
   logo.src = document.body.classList.contains('light-mode')
-    ? '../private/media/general/images/logo_dark.svg'
-    : '../private/media/general/images/logo_light.svg';
+    ? '../../private/media/general/images/logo_dark.svg'
+    : '../../private/media/general/images/logo_light.svg';
 });
 
 // Handle profile image click
@@ -104,3 +104,13 @@ document.addEventListener('DOMContentLoaded', () => {
     );
   });
 });
+
+function saveUserLoginInfo(userId, profileImage) {
+  localStorage.setItem('user_id', userId);
+  localStorage.setItem('profile_image', profileImage);
+}
+
+function removeUserLoginInfo() {
+  localStorage.removeItem('user_id');
+  localStorage.removeItem('profile_image');
+}

@@ -1,3 +1,32 @@
+<?php
+session_start();
+require_once '../private/scripts/php/config.php';
+
+if (!isset($_SESSION['user_id'])) {
+  $user_id = isset($_COOKIE['user_id']) ? $_COOKIE['user_id'] : 0;
+  $_SESSION['user_id'] = $user_id;
+} else {
+  $user_id = $_SESSION['user_id'];
+}
+
+if ($user_id) {
+  $sql = "SELECT profile_image FROM Users WHERE user_id = ?";
+  $stmt = $conn->prepare($sql);
+  $stmt->bind_param('i', $user_id);
+  $stmt->execute();
+  $stmt->bind_result($profile_image);
+  $stmt->fetch();
+  $stmt->close();
+} else {
+  $profile_image = ""; // Set a default profile image URL if not logged in
+}
+
+$conn->close();
+
+echo "<script>saveUserLoginInfo(" . $user_id . ", '" . $profile_image . "');</script>";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,7 +55,7 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="../private/media/general/images/dark.svg"
+      href="../private/media/general/images/favicon_dark.svg"
       media="(prefers-color-scheme: dark)"
     />
   </head>
@@ -44,7 +73,7 @@
         />
         <div class="profile">
           <img
-            src="../private/media/general/images/profile.gif"
+            src="<?php echo $profile_image; ?>"
             alt="Profile Image"
             class="profile-image"
             id="profile-image"
@@ -99,27 +128,27 @@
     </div>
 
     <div class="navOverlay" id="navOverlay">
-      <span class="overlayTitle">Menu</span>
+       <span class="overlayTitle">Menu</span>
       <i class="fa-solid fa-xmark" id="navOverlayCloseButton"></i>
       <ul>
+        <li><a href="#">Manage Account</a></li>
         <li><a href="#">Settings</a></li>
         <li><a href="#">Help & Feedback</a></li>
-        <li><a href="#">Switch account (auto grant access for admin)</a></li>
-        <li><a href="#">Log out</a></li>
-        <button id="theme-toggle">Toggle Theme</button>
+        <li><a href="./home.php" onclick="removeUserLoginInfo()">Log out</a></li>
+        <button id="theme-toggle">Change theme</button>
       </ul>
     </div>
 
-    <!-- This isn't complete -->
-    <div class="notificationOverlay" id="notificationOverlay">
-      <span class="overlayTitle">Notifications</span>
-      <i class="fa-solid fa-xmark" id="notificationOverlayCloseButton"></i>
+    
+<div class="notificationOverlay" id="notificationOverlay">
+  <span class="overlayTitle">Notifications</span>
+  <i class="fa-solid fa-xmark" id="notificationOverlayCloseButton"></i>
       <ul>
         <li>
           <div class="message-container" id="message">
             <div class="message-profile">
               <img
-                src="../private/media/general/images/profile.gif"
+                src="<?php echo $profile_image; ?>"
                 alt="Profile Image"
                 class="message-profile-image"
               />
@@ -141,7 +170,7 @@
           <div class="message-container" id="message">
             <div class="message-profile">
               <img
-                src="../private/media/general/images/profile.gif"
+                src="<?php echo $profile_image; ?>"
                 alt="Profile Image"
                 class="message-profile-image"
               />
@@ -163,7 +192,7 @@
           <div class="message-container" id="message">
             <div class="message-profile">
               <img
-                src="../private/media/general/images/profile.gif"
+                src="<?php echo $profile_image; ?>"
                 alt="Profile Image"
                 class="message-profile-image"
               />
@@ -185,7 +214,7 @@
           <div class="message-container" id="message">
             <div class="message-profile">
               <img
-                src="../private/media/general/images/profile.gif"
+                src="<?php echo $profile_image; ?>"
                 alt="Profile Image"
                 class="message-profile-image"
               />
@@ -207,7 +236,7 @@
           <div class="message-container" id="message">
             <div class="message-profile">
               <img
-                src="../private/media/general/images/profile.gif"
+                src="<?php echo $profile_image; ?>"
                 alt="Profile Image"
                 class="message-profile-image"
               />
@@ -229,7 +258,7 @@
           <div class="message-container" id="message">
             <div class="message-profile">
               <img
-                src="../private/media/general/images/profile.gif"
+                src="<?php echo $profile_image; ?>"
                 alt="Profile Image"
                 class="message-profile-image"
               />
@@ -251,7 +280,7 @@
           <div class="message-container" id="message">
             <div class="message-profile">
               <img
-                src="../private/media/general/images/profile.gif"
+                src="<?php echo $profile_image; ?>"
                 alt="Profile Image"
                 class="message-profile-image"
               />
@@ -273,7 +302,7 @@
           <div class="message-container" id="message">
             <div class="message-profile">
               <img
-                src="../private/media/general/images/profile.gif"
+                src="<?php echo $profile_image; ?>"
                 alt="Profile Image"
                 class="message-profile-image"
               />
@@ -295,7 +324,7 @@
           <div class="message-container" id="message">
             <div class="message-profile">
               <img
-                src="../private/media/general/images/profile.gif"
+                src="<?php echo $profile_image; ?>"
                 alt="Profile Image"
                 class="message-profile-image"
               />
@@ -317,7 +346,7 @@
           <div class="message-container" id="message">
             <div class="message-profile">
               <img
-                src="../private/media/general/images/profile.gif"
+                src="<?php echo $profile_image; ?>"
                 alt="Profile Image"
                 class="message-profile-image"
               />
@@ -339,7 +368,7 @@
           <div class="message-container" id="message">
             <div class="message-profile">
               <img
-                src="../private/media/general/images/profile.gif"
+                src="<?php echo $profile_image; ?>"
                 alt="Profile Image"
                 class="message-profile-image"
               />
@@ -361,7 +390,7 @@
           <div class="message-container" id="message">
             <div class="message-profile">
               <img
-                src="../private/media/general/images/profile.gif"
+                src="<?php echo $profile_image; ?>"
                 alt="Profile Image"
                 class="message-profile-image"
               />
@@ -383,7 +412,7 @@
           <div class="message-container" id="message">
             <div class="message-profile">
               <img
-                src="../private/media/general/images/profile.gif"
+                src="<?php echo $profile_image; ?>"
                 alt="Profile Image"
                 class="message-profile-image"
               />
@@ -407,6 +436,6 @@
     </div>
     <!-- This isn't complete -->
 
-    <script src="../private/scripts/main.js"></script>
+    <script src="../private/scripts/js/main.js"></script>
   </body>
 </html>

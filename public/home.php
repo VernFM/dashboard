@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Pontus Henriksson" />
-    <meta name="publisher" content="Pontus Henriksson" />
-    <meta name="copyright" content="Pontus Henriksson" />
-    <meta name="owner" content="Pontus Henriksson" />
-    <meta name="description" content="VernFM dashboard is an intuitive and user-friendly platform designed to monitor and manage your VernFM radio stations with ease." />
-    <title>VernFM dashboard | Landing page</title>
-    <link rel="stylesheet" href="./style.css" />
-    <script
-      src="https://kit.fontawesome.com/7799275d96.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="icon" type="image/svg+xml" href="../private/media/general/images/favicon_light.svg" media="(prefers-color-scheme: light)" />
-    <link rel="icon" type="image/svg+xml" href="../private/media/general/images/dark.svg" media="(prefers-color-scheme: dark)" />
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <img class="header-logo" src="../private/media/general/images/logo_light.svg" alt="VernFM logo" id="logo" />
-        <a class="signup-btn">
-          Sign up
-        </a>
-        <a class="login-btn">
-          Log in
-        </a>
-      </header>
-      <h2>Welcome to the VernFM dashboard!</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur eos voluptates enim consequatur cupiditate eius, error tenetur necessitatibus itaque quis nulla dolorem deleniti atque ex facere neque laudantium officiis praesentium?
-        <br>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, pariatur minima omnis nisi atque distinctio deserunt amet officiis praesentium magni. Omnis laborum delectus accusantium, laboriosam perspiciatis excepturi nihil quo sit.
-      </p>
-    </div>
-    <script src="../private/scripts/main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>VernFM</title>
+</head>
+<body class="landing-part">
+    <header class="landing-part">
+        <h1>VernFM</h1>
+    </header>
+    <main class="landing-part">
+        <section class="auth-container landing-part">
+            <div class="auth-card landing-part">
+                <h2 class="landing-part">Login</h2>
+                <form class="landing-part" action="../private/scripts/php/login.php" method="POST">
+                    <input class="landing-part" type="email" name="email" placeholder="Email" required>
+                    <input class="landing-part" type="password" name="password" placeholder="Password" required>
+                    <button class="landing-part" type="submit">Login</button>
+                </form>
+            </div>
+            <div class="auth-card landing-part">
+                <h2 class="landing-part">Signup</h2>
+                <form class="landing-part" action="../private/scripts/php/signup.php" method="POST">
+                  <label class="landing-part" for="user_type">Account Type:</label>
+<select class="landing-part"  name="user_type" id="user_type">
+  <option class="landing-part" value="regular">Regular</option>
+  <option class="landing-part" value="artist">Artist</option>
+</select>
+                    <input class="landing-part" type="text" name="display_name" placeholder="Display Name" required>
+                    <input class="landing-part" type="text" name="first_name" placeholder="First Name" required>
+                    <input class="landing-part" type="text" name="last_name" placeholder="Last Name" required>
+                    <input class="landing-part" type="email" name="email" placeholder="Email" required>
+                    <input class="landing-part" type="password" name="password" placeholder="Password" required>
+                    <label class="landing-part" for="confirm_password">Confirm Password:</label>
+<input class="landing-part" type="password" name="confirm_password" id="confirm_password" required>
+                    <button class="landing-part" type="submit">Signup</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
 </html>

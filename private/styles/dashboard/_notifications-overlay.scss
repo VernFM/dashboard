@@ -222,6 +222,10 @@
 }
 
 .message-container.light-mode .message-title {
+  color: $blue-accent-color;
+}
+
+.message-container.light-mode .message-date {
   color: $metal-accent-color;
 }
 

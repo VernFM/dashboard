@@ -9,7 +9,13 @@ body {
   color: $white;
   transition: background-color 0.3s, color 0.3s;
 }
-
+/* Nav styling */
+nav {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
 /* Light mode body styling */
 body.light-mode {
   background-color: $white;
@@ -52,50 +58,6 @@ header,
   border-top: $dark-gray 4px solid;
 }
 
-/* navOverlay styling */
-.navOverlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: $dimmed-dark;
-  z-index: 1000;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-}
-
-/* Light mode navOverlay styling */
-.navOverlay.light-mode {
-  background-color: $dimmed-light;
-}
-
-/* navOverlay ul styling */
-.navOverlay ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* navOverlay ul li styling */
-.navOverlay ul li {
-  padding: 10px 0;
-  text-align: center;
-  font-size: 1.2em;
-}
-
-/* navOverlay ul li a styling */
-.navOverlay ul li a {
-  color: $white;
-  text-decoration: none;
-}
-
 /* Profile styling */
 .profile {
   display: flex;
@@ -115,135 +77,6 @@ h2 {
   margin-left: calc(10vw - 20px);
 }
 
-/* Statistics styling */
-.statistics {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  z-index: 2;
-  padding-bottom: 120px;
-}
-
-/* Statistic-card and theme-toggle styling */
-.statistic-card,
-#theme-toggle {
-  background-color: $accent-color;
-  color: $dark-gray;
-  font-weight: 400;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 10px;
-}
-
-/* Statistic-card styling */
-.statistic-card {
-  position: relative; /* IOS fix */
-  width: 80%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: $white;
-  font-size: 48px;
-  font-weight: 700;
-}
-
-/* Statistic-card background and color settings */
-.statistic-card {
-  width: 80%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: $white;
-  font-size: 48px;
-  font-weight: 700;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: grayscale(100%);
-}
-
-/* Light mode statistic-card background and color settings */
-.statistic-card.light-mode {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: $white;
-  filter: grayscale(100%);
-}
-
-.statistic-card1,
-.statistic-card1.light-mode,
-.statistic-card4,
-.statistic-card4.light-mode,
-.statistic-card7,
-.statistic-card7.light-mode,
-.statistic-card10,
-.statistic-card10.light-mode {
-  background-image: url(../private/media/general/images/pattern.svg);
-}
-
-.statistic-card2,
-.statistic-card2.light-mode,
-.statistic-card5,
-.statistic-card5.light-mode,
-.statistic-card8,
-.statistic-card8.light-mode,
-.statistic-card11,
-.statistic-card11.light-mode {
-  background-image: url(../private/media/general/images/pattern-2.svg);
-}
-
-.statistic-card3,
-.statistic-card3.light-mode,
-.statistic-card6,
-.statistic-card6.light-mode,
-.statistic-card9,
-.statistic-card9.light-mode,
-.statistic-card12,
-.statistic-card12.light-mode {
-  background-image: url(../private/media/general/images/pattern-3.svg);
-}
-
-/* Nav styling */
-nav {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 20px;
-}
-
-/* nav-icon styling */
-.nav-icon {
-  font-size: 18px;
-  color: $dark-gray;
-}
-
-/* Nav-page styling */
-.nav-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: $white;
-  border-radius: 50px;
-  margin: 5px;
-}
-
-/* Nav-text styling */
-.nav-text {
-  margin-top: 4px;
-  font-size: 12px;
-  color: $dark-gray;
-  font-weight: 400;
-}
-
 /* Footer styling */
 footer {
   display: flex;
@@ -251,46 +84,10 @@ footer {
   padding: 20px;
 }
 
-/* Theme-toggle button styling */
-#theme-toggle {
-  border: none;
-  padding: 10px 20px;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* Light mode theme-toggle button styling */
-#theme-toggle.light-mode {
-  background-color: $dark-gray;
-  color: $white;
-}
-
-/* Light mode text links styling */
-.navOverlay.light-mode ul li a {
-  color: $dark-gray;
-}
-
 /* Header-logo styling */
 .header-logo {
   height: 50px;
   width: auto;
-}
-
-/* Section-card-title styling */
-.section-card-title {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  font-size: 18px;
-  font-weight: 300;
-}
-
-#navOverlayCloseButton {
-  position: absolute;
-  right: 40px;
-  top: 40px;
-  font-size: 24px;
 }
 
 .signup-btn,
@@ -310,17 +107,4 @@ footer {
 .signup-btn {
   background-color: $accent-color;
   color: $dark-gray;
-}
-
-#navOverlayCloseButton {
-  cursor: pointer;
-}
-
-/* ------- [GLOBAL FOR ALL OVERLAYS] --------*/
-
-.overlayTitle {
-  position: absolute;
-  top: 40px;
-  font-size: 24px;
-  font-weight: 700;
 }

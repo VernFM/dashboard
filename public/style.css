@@ -217,6 +217,10 @@
 }
 
 .message-container.light-mode .message-title {
+  color: #2892d7;
+}
+
+.message-container.light-mode .message-date {
   color: #495d63;
 }
 
@@ -225,60 +229,64 @@
 }
 
 /* [Colors] */
-/* [Colors] */
-/* General body styling */
-body {
-  font-family: "Lato", sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #242529;
-  color: #ffffff;
-  transition: background-color 0.3s, color 0.3s;
+#theme-toggle {
+  background-color: #f9ff7a;
+  color: #242529;
+  font-weight: 400;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
 }
 
-/* Light mode body styling */
-body.light-mode {
-  background-color: #ffffff;
+.nav-icon,
+.nav-text {
+  font-size: 18px;
   color: #242529;
 }
 
-/* Container styling */
-.container {
+.nav-text {
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+.nav-page {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-}
-
-/* Header and navbar-bottom styling */
-header,
-.navbar-bottom {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  position: relative;
   align-items: center;
-}
-
-/* Navbar-bottom styling */
-.navbar-bottom {
-  justify-content: space-around;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #f9ff7a;
+  justify-content: center;
+  text-decoration: none;
   color: #ffffff;
-  border-radius: 50px 50px 0 0;
-  z-index: 3;
-  border-top: #ffffff 4px solid;
+  border-radius: 50px;
+  margin: 5px;
 }
 
-/* Light mode navbar-bottom styling */
-.navbar-bottom.light-mode {
-  border-top: #242529 4px solid;
+#theme-toggle {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #b8b8ff;
+  color: #242529;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* navOverlay styling */
+#theme-toggle.light-mode {
+  background-color: #f9ff7a;
+  color: #242529;
+}
+
+.navOverlay.light-mode ul li a {
+  color: #242529;
+}
+
+#navOverlayCloseButton {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
 .navOverlay {
   display: none;
   position: fixed;
@@ -293,12 +301,10 @@ header,
   justify-content: center;
 }
 
-/* Light mode navOverlay styling */
 .navOverlay.light-mode {
   background-color: rgba(228, 228, 228, 0.9411764706);
 }
 
-/* navOverlay ul styling */
 .navOverlay ul {
   list-style-type: none;
   padding: 0;
@@ -309,38 +315,26 @@ header,
   align-items: center;
 }
 
-/* navOverlay ul li styling */
 .navOverlay ul li {
   padding: 10px 0;
   text-align: center;
   font-size: 1.2em;
 }
 
-/* navOverlay ul li a styling */
 .navOverlay ul li a {
   color: #ffffff;
   text-decoration: none;
 }
 
-/* Profile styling */
-.profile {
-  display: flex;
-  align-items: center;
+/* [Colors] */
+.overlayTitle {
+  position: absolute;
+  top: 40px;
+  font-size: 24px;
+  font-weight: 700;
 }
 
-/* Profile-image styling */
-.profile-image {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  cursor: pointer;
-}
-
-/* H2 styling */
-h2 {
-  margin-left: calc(10vw - 20px);
-}
-
+/* [Colors] */
 /* Statistics styling */
 .statistics {
   display: flex;
@@ -351,8 +345,7 @@ h2 {
 }
 
 /* Statistic-card and theme-toggle styling */
-.statistic-card,
-#theme-toggle {
+.statistic-card {
   background-color: #f9ff7a;
   color: #242529;
   font-weight: 400;
@@ -436,73 +429,6 @@ h2 {
   background-image: url(../private/media/general/images/pattern-3.svg);
 }
 
-/* Nav styling */
-nav {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 20px;
-}
-
-/* nav-icon styling */
-.nav-icon {
-  font-size: 18px;
-  color: #242529;
-}
-
-/* Nav-page styling */
-.nav-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: #ffffff;
-  border-radius: 50px;
-  margin: 5px;
-}
-
-/* Nav-text styling */
-.nav-text {
-  margin-top: 4px;
-  font-size: 12px;
-  color: #242529;
-  font-weight: 400;
-}
-
-/* Footer styling */
-footer {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-}
-
-/* Theme-toggle button styling */
-#theme-toggle {
-  border: none;
-  padding: 10px 20px;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* Light mode theme-toggle button styling */
-#theme-toggle.light-mode {
-  background-color: #242529;
-  color: #ffffff;
-}
-
-/* Light mode text links styling */
-.navOverlay.light-mode ul li a {
-  color: #242529;
-}
-
-/* Header-logo styling */
-.header-logo {
-  height: 50px;
-  width: auto;
-}
-
 /* Section-card-title styling */
 .section-card-title {
   position: absolute;
@@ -512,11 +438,97 @@ footer {
   font-weight: 300;
 }
 
-#navOverlayCloseButton {
-  position: absolute;
-  right: 40px;
-  top: 40px;
-  font-size: 24px;
+/* [Colors] */
+/* General body styling */
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #242529;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Nav styling */
+nav {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* Light mode body styling */
+body.light-mode {
+  background-color: #ffffff;
+  color: #242529;
+}
+
+/* Container styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header and navbar-bottom styling */
+header,
+.navbar-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+  align-items: center;
+}
+
+/* Navbar-bottom styling */
+.navbar-bottom {
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f9ff7a;
+  color: #ffffff;
+  border-radius: 50px 50px 0 0;
+  z-index: 3;
+  border-top: #ffffff 4px solid;
+}
+
+/* Light mode navbar-bottom styling */
+.navbar-bottom.light-mode {
+  border-top: #242529 4px solid;
+}
+
+/* Profile styling */
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+/* Profile-image styling */
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+/* H2 styling */
+h2 {
+  margin-left: calc(10vw - 20px);
+}
+
+/* Footer styling */
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Header-logo styling */
+.header-logo {
+  height: 50px;
+  width: auto;
 }
 
 .signup-btn,
@@ -538,16 +550,77 @@ footer {
   color: #242529;
 }
 
-#navOverlayCloseButton {
-  cursor: pointer;
+/* [Colors] */
+body.landing-part {
+  background-color: #242529;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
-/* ------- [GLOBAL FOR ALL OVERLAYS] --------*/
-.overlayTitle {
-  position: absolute;
-  top: 40px;
-  font-size: 24px;
-  font-weight: 700;
+header.landing-part {
+  background-color: #35363d;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+main.landing-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.auth-container.landing-part {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.auth-card.landing-part {
+  background-color: #35363d;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+h2.landing-part {
+  margin-bottom: 1rem;
+}
+
+form.landing-part {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input.landing-part {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+button.landing-part {
+  padding: 0.5rem;
+  background-color: #f9ff7a;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.landing-part:hover {
+  background-color: #2892d7;
+}
+
+@media (min-width: 768px) {
+  .auth-container.landing-part {
+    flex-direction: row;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

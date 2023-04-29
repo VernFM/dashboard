@@ -1,0 +1,73 @@
+@import '../_default.scss';
+
+body.landing-part {
+  background-color: $dark-gray;
+  color: $white;
+  margin: 0;
+  padding: 0;
+}
+
+header.landing-part {
+  background-color: $light-gray;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+main.landing-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.auth-container.landing-part {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.auth-card.landing-part {
+  background-color: $light-gray;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+h2.landing-part {
+  margin-bottom: 1rem;
+}
+
+form.landing-part {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input.landing-part {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: $white;
+}
+
+button.landing-part {
+  padding: 0.5rem;
+  background-color: $accent-color;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.landing-part:hover {
+  background-color: $blue-accent-color;
+}
+
+@media (min-width: 768px) {
+  .auth-container.landing-part {
+    flex-direction: row;
+  }
+}

@@ -1,3 +1,105 @@
+// Import default styles
 @import '../_default.scss';
 
-// a
+// Theme toggle styling
+#theme-toggle {
+  background-color: $accent-color;
+  color: $dark-gray;
+  font-weight: 400;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+}
+
+// Nav icon and text styles
+.nav-icon,
+.nav-text {
+  font-size: 18px;
+  color: $dark-gray;
+}
+
+.nav-text {
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+// Nav page styles
+.nav-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: $white;
+  border-radius: 50px;
+  margin: 5px;
+}
+
+// Theme toggle button
+#theme-toggle {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: $light-purple;
+  color: $dark-gray;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle.light-mode {
+  background-color: $accent-color;
+  color: $dark-gray;
+}
+
+.navOverlay.light-mode ul li a {
+  color: $dark-gray;
+}
+
+// Nav overlay close button
+#navOverlayCloseButton {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+// Nav overlay styles
+.navOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $dimmed-dark;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+}
+
+.navOverlay.light-mode {
+  background-color: $dimmed-light;
+}
+
+.navOverlay ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navOverlay ul li {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.navOverlay ul li a {
+  color: $white;
+  text-decoration: none;
+}

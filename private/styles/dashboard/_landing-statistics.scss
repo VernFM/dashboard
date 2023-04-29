@@ -1,0 +1,104 @@
+@import '../_default.scss';
+
+/* Statistics styling */
+.statistics {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  z-index: 2;
+  padding-bottom: 120px;
+}
+
+/* Statistic-card and theme-toggle styling */
+.statistic-card {
+  background-color: $accent-color;
+  color: $dark-gray;
+  font-weight: 400;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+}
+
+/* Statistic-card styling */
+.statistic-card {
+  position: relative; /* IOS fix */
+  width: 80%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+/* Statistic-card background and color settings */
+.statistic-card {
+  width: 80%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  font-size: 48px;
+  font-weight: 700;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(100%);
+}
+
+/* Light mode statistic-card background and color settings */
+.statistic-card.light-mode {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  filter: grayscale(100%);
+}
+
+.statistic-card1,
+.statistic-card1.light-mode,
+.statistic-card4,
+.statistic-card4.light-mode,
+.statistic-card7,
+.statistic-card7.light-mode,
+.statistic-card10,
+.statistic-card10.light-mode {
+  background-image: url(../private/media/general/images/pattern.svg);
+}
+
+.statistic-card2,
+.statistic-card2.light-mode,
+.statistic-card5,
+.statistic-card5.light-mode,
+.statistic-card8,
+.statistic-card8.light-mode,
+.statistic-card11,
+.statistic-card11.light-mode {
+  background-image: url(../private/media/general/images/pattern-2.svg);
+}
+
+.statistic-card3,
+.statistic-card3.light-mode,
+.statistic-card6,
+.statistic-card6.light-mode,
+.statistic-card9,
+.statistic-card9.light-mode,
+.statistic-card12,
+.statistic-card12.light-mode {
+  background-image: url(../private/media/general/images/pattern-3.svg);
+}
+
+/* Section-card-title styling */
+.section-card-title {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 18px;
+  font-weight: 300;
+}

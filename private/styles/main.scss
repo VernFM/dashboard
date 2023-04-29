@@ -1,7 +1,12 @@
 // Global
 @use './_default.scss';
 
-// Home
-@use './dashboard/_notifications.scss';
+// Landing dashboard
+@use './dashboard/_notifications-overlay.scss';
 @use './dashboard/_nav-overlay.scss';
+@use './dashboard/_general-overlay.scss';
+@use './dashboard/_landing-statistics';
 @use './dashboard/_other.scss';
+
+// Landing page
+@use './landing/_landing.scss';
