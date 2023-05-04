@@ -16,7 +16,7 @@ const toggleLightMode = element => {
 };
 
 const themeToggle = getElement('theme-toggle');
-const logo = getElement('logo');
+const logo = getElement('header-logo');
 const notificationIcon = getElement('notificationIcon');
 const navOverlayLinks = document.querySelectorAll('.navOverlay a');
 const navOverlayCloseButton = getElement('navOverlayCloseButton');

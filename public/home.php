@@ -23,8 +23,8 @@
             <div class="auth-card landing-part">
                 <h2 class="landing-part">Signup</h2>
                 <form class="landing-part" action="../private/scripts/php/signup.php" method="POST">
-                  <label class="landing-part" for="user_type">Account Type:</label>
-<select class="landing-part"  name="user_type" id="user_type">
+                  <label class="landing-part" for="type">Account Type:</label>
+<select class="landing-part"  name="type" id="type">
   <option class="landing-part" value="regular">Regular</option>
   <option class="landing-part" value="artist">Artist</option>
 </select>

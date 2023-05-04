@@ -228,16 +228,25 @@
   color: #b8b8ff;
 }
 
-/* [Colors] */
-#theme-toggle {
-  background-color: #f9ff7a;
-  color: #242529;
-  font-weight: 400;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 10px;
+.messageNavButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  position: absolute;
+  top: 100px;
 }
 
+.messageNavButtons button {
+  background-color: aquamarine;
+  color: black;
+  height: 40px;
+  width: 120px;
+  border: none;
+  border-radius: 15px;
+  z-index: 5;
+}
+
+/* [Colors] */
 .nav-icon,
 .nav-text {
   font-size: 18px;
@@ -258,6 +267,15 @@
   color: #ffffff;
   border-radius: 50px;
   margin: 5px;
+}
+
+#theme-toggle {
+  background-color: #f9ff7a;
+  color: #242529;
+  font-weight: 400;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
 }
 
 #theme-toggle {
@@ -365,7 +383,6 @@
   justify-content: center;
   align-items: center;
   color: #ffffff;
-  font-size: 48px;
   font-weight: 700;
 }
 
@@ -379,11 +396,11 @@
   justify-content: center;
   align-items: center;
   color: #ffffff;
-  font-size: 48px;
   font-weight: 700;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  font-size: calc(3.5vw + 10px);
   filter: grayscale(100%);
 }
 
@@ -394,6 +411,18 @@
   background-size: cover;
   color: #ffffff;
   filter: grayscale(100%);
+}
+
+.section-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  max-width: 90%;
+  line-height: 1.4;
+  text-align: center;
+  word-wrap: break-word;
 }
 
 .statistic-card1,

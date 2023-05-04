@@ -30,7 +30,6 @@
   justify-content: center;
   align-items: center;
   color: $white;
-  font-size: 48px;
   font-weight: 700;
 }
 
@@ -44,11 +43,11 @@
   justify-content: center;
   align-items: center;
   color: $white;
-  font-size: 48px;
   font-weight: 700;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  font-size: calc(3.5vw + 10px);
   filter: grayscale(100%);
 }
 
@@ -59,6 +58,18 @@
   background-size: cover;
   color: $white;
   filter: grayscale(100%);
+}
+
+.section-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  max-width: 90%;
+  line-height: 1.4;
+  text-align: center;
+  word-wrap: break-word;
 }
 
 .statistic-card1,

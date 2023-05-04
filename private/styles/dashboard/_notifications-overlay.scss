@@ -232,3 +232,21 @@
 .message-date {
   color: $light-purple;
 }
+
+.messageNavButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  position: absolute;
+  top: 100px;
+}
+
+.messageNavButtons button {
+  background-color: aquamarine;
+  color: black;
+  height: 40px;
+  width: 120px;
+  border: none;
+  border-radius: 15px;
+  z-index: 5;
+}

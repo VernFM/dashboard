@@ -1,16 +1,6 @@
 // Import default styles
 @import '../_default.scss';
 
-// Theme toggle styling
-#theme-toggle {
-  background-color: $accent-color;
-  color: $dark-gray;
-  font-weight: 400;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 10px;
-}
-
 // Nav icon and text styles
 .nav-icon,
 .nav-text {
@@ -33,6 +23,16 @@
   color: $white;
   border-radius: 50px;
   margin: 5px;
+}
+
+// Theme toggle styling
+#theme-toggle {
+  background-color: $accent-color;
+  color: $dark-gray;
+  font-weight: 400;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
 }
 
 // Theme toggle button
